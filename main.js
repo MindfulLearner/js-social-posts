@@ -120,70 +120,70 @@ for (let i = 0; i < posts.length; i++) {
         </div>
         </div >
         `;
-
 }
 
+
+
 let likeButtons = document.querySelectorAll(".js-like-button");
+let likeCounters = document.querySelectorAll(".js-likes-counter");
+
 for (let i = 0; i < posts.length; i++) {
     likeButtons[i].addEventListener("click", function (event) {
         event.preventDefault();
-        this.classList.add('like-button--liked');
 
-const postID = this.dataset.postid;
+        if (!this.classList.contains('like-button--liked')) {
 
-        const counterElem =document.getElementById(postID);
-        let likeCounter = parseInt(counterElem.innerText);
-        likeCounter++
-        counterElem.innerHTML = likeCounter;
+            this.classList.add('like-button--liked');
+
+            let contatore = likeCounters[i];
+
+            let contatorePiu = parseInt(contatore.innerText);
+            contatore.innerText = contatorePiu + 1;
+
+        } else {
+
+            this.classList.remove('like-button--liked');
+
+            let contatore = likeCounters[i];
+
+            let contatorePiu = parseInt(contatore.innerText);
+            contatore.innerText = contatorePiu - 1;
+
+        }
     });
 }
 
-const myArr = [];
-let totale = 0; 
-
-do {
-    let inputNumero = parseInt(prompt('metti numeri'));
-    totale += inputNumero; 
-    myArr.push(inputNumero); 
-} while (totale <= 50);
-
-console.log(myArr);
-
-
-
-
-
-let parola1 = prompt('inserisci una parola1');
-let parola2 = prompt('inserisci una parola2');
-
-swagChekDelleParoleInseriteDallUtenteInPrompt(parola1,parola2);
-
-function swagChekDelleParoleInseriteDallUtenteInPrompt(swag1, swag2) {
-    if (swag1.length === swag2.length) {
-        console.log(`le parole hanno la stessa lunghezza"${swag1}" e "${swag2}"`);
-    } else {
-        if (swag1.length > swag2.length) {
-            console.log(`---------------------------------------------------------`);
-            console.log(`e' piu' lungo la prima parola "${swag1}"`);
-            let differenza = swag1.length - swag2.length;
-            console.log(`---------------------------------------------------------`);
-            console.log("la prima parola e' piu lunga della secconda di " + differenza);
-            console.log(`---------------------------------------------------------`);
-            console.log(`e' piu' corto "${swag2}"`);
-            console.log(`---------------------------------------------------------`);
-        } else {
-            console.log(`---------------------------------------------------------`);
-            console.log(`e' piu' lungo la seconda parola "${swag2}"`);
-            let differenza = swag2.length - swag1.length;
-            console.log(`---------------------------------------------------------`);
-            console.log("la prima parola e' piu lunga della secconda di " + differenza);
-            console.log(`---------------------------------------------------------`);
-            console.log(`e' piu' corto "${swag1}"`);
-            console.log(`---------------------------------------------------------`);
-
-        }
-    }
-}
+// let parola1 = prompt('inserisci una parola1');
+// let parola2 = prompt('inserisci una parola2');
+// 
+    // swagChekDelleParoleInseriteDallUtenteInPrompt(parola1,parola2);
+// 
+    // function swagChekDelleParoleInseriteDallUtenteInPrompt(swag1, swag2) {
+        //     if (swag1.length === swag2.length) {
+            //         console.log(`le parole hanno la stessa lunghezza"${swag1}" e "${swag2}"`);
+            //     } else {
+                //         if (swag1.length > swag2.length) {
+                    //             console.log(`---------------------------------------------------------`);
+                    //             console.log(`e' piu' lungo la prima parola "${swag1}"`);
+                    //             let differenza = swag1.length - swag2.length;
+                    //             console.log(`---------------------------------------------------------`);
+                    //             console.log("la prima parola e' piu lunga della secconda di " + differenza);
+                    //             console.log(`---------------------------------------------------------`);
+                    //             console.log(`e' piu' corto "${swag2}"`);
+                    //             console.log(`---------------------------------------------------------`);
+                    //         } else {
+                        //             console.log(`---------------------------------------------------------`);
+                        //             console.log(`e' piu' lungo la seconda parola "${swag2}"`);
+                        //             let differenza = swag2.length - swag1.length;
+                        //             console.log(`---------------------------------------------------------`);
+                        //             console.log("la prima parola e' piu lunga della secconda di " + differenza);
+                        //             console.log(`---------------------------------------------------------`);
+                        //             console.log(`e' piu' corto "${swag1}"`);
+                        //             console.log(`---------------------------------------------------------`);
+                        // 
+                            //         }
+                //     }
+        // }
 
 
 
