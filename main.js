@@ -1,71 +1,71 @@
 const posts = [
-  {
-    // class="like-button" data-postid = "1"
-    id: 1,
-    // class = "post__text"
-    content:
-      "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-    // class = "post__image"
-    media: "https://unsplash.it/600/300?image=171",
-    author: {
-      // class = "post-meta__author"
-      name: "Phil Mangione",
-      // class = "profile-pic"
-      image: "https://unsplash.it/300/300?image=15",
+    {
+        // class="like-button" data-postid = "1"
+        id: 1,
+        // class = "post__text"
+        content:
+        "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        // class = "post__image"
+        media: "https://unsplash.it/600/300?image=171",
+        author: {
+            // class = "post-meta__author"
+            name: "Phil Mangione",
+            // class = "profile-pic"
+            image: "https://unsplash.it/300/300?image=15",
+        },
+        // class = "js-likes-counter"
+        likes: 80,
+        // class = "post-meta__time"
+        created: "2021-06-25",
     },
-    // class = "js-likes-counter"
-    likes: 80,
-    // class = "post-meta__time"
-    created: "2021-06-25",
-  },
-  {
-    id: 2,
-    content:
-      "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-    media: "https://unsplash.it/600/400?image=112",
-    author: {
-      name: "Sofia Perlari",
-      image: "https://unsplash.it/300/300?image=10",
+    {
+        id: 2,
+        content:
+        "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        media: "https://unsplash.it/600/400?image=112",
+        author: {
+            name: "Sofia Perlari",
+            image: "https://unsplash.it/300/300?image=10",
+        },
+        likes: 120,
+        created: "2021-09-03",
     },
-    likes: 120,
-    created: "2021-09-03",
-  },
-  {
-    id: 3,
-    content:
-      "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-    media: "https://unsplash.it/600/400?image=234",
-    author: {
-      name: "Chiara Passaro",
-      image: "https://unsplash.it/300/300?image=20",
+    {
+        id: 3,
+        content:
+        "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        media: "https://unsplash.it/600/400?image=234",
+        author: {
+            name: "Chiara Passaro",
+            image: "https://unsplash.it/300/300?image=20",
+        },
+        likes: 78,
+        created: "2021-05-15",
     },
-    likes: 78,
-    created: "2021-05-15",
-  },
-  {
-    id: 4,
-    content:
-      "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-    media: "https://unsplash.it/600/400?image=24",
-    author: {
-      name: "Luca Formicola",
-      image: null,
+    {
+        id: 4,
+        content:
+        "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        media: "https://unsplash.it/600/400?image=24",
+        author: {
+            name: "Luca Formicola",
+            image: null,
+        },
+        likes: 56,
+        created: "2021-04-03",
     },
-    likes: 56,
-    created: "2021-04-03",
-  },
-  {
-    id: 5,
-    content:
-      "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
-    media: "https://unsplash.it/600/400?image=534",
-    author: {
-      name: "Alessandro Sainato",
-      image: "https://unsplash.it/300/300?image=29",
+    {
+        id: 5,
+        content:
+        "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        media: "https://unsplash.it/600/400?image=534",
+        author: {
+            name: "Alessandro Sainato",
+            image: "https://unsplash.it/300/300?image=29",
+        },
+        likes: 95,
+        created: "2021-03-05",
     },
-    likes: 95,
-    created: "2021-03-05",
-  },
 ];
 
 // class="like-button" data-postid = "1"
@@ -88,7 +88,7 @@ let likesCounter = document.getElementsByClassName("js-likes-counter");
 let postTime = document.getElementsByClassName("post-meta__time");
 
 for (let i = 0; i < posts.length; i++) {
-  postList.innerHTML += `
+    postList.innerHTML += `
         <div class="post">
         <div class="post__header">
         <div class="post-meta">
@@ -114,16 +114,26 @@ for (let i = 0; i < posts.length; i++) {
         </a>
         </div>
         <div class="likes__counter">
-        Piace a <b id="like-counter-1" class="js-likes-counter">${posts[i]["likes"]}</b> persone
+        Piace a <b id="like-counter-${posts[i]["id"]}" class="js-likes-counter">${posts[i]["likes"]}</b> persone
         </div>
         </div>
         </div>
         </div >
         `;
 
-  let likeButtons = document.getElementsByClassName("like-button");
-  likeButtons[i].addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log("hai stampato " + i);
-  });
+}
+
+let likeButtons = document.querySelectorAll(".js-like-button");
+for (let i = 0; i < posts.length; i++) {
+    likeButtons[i].addEventListener("click", function (event) {
+        event.preventDefault();
+        this.classList.add('like-button--liked');
+
+
+        let postID = this.getAttribute('data-postid');
+        const counterElem =document.getElementById(postID);
+        let likeCounter = parseInt(counterElem.innerText);
+        likeCounter++
+        counterElem.innerHTML = likeCounter;
+    });
 }
