@@ -153,7 +153,43 @@ for (let i = 0; i < posts.length; i++) {
     });
 }
 
-// let parola1 = prompt('inserisci una parola1');
+// 
+    // let likeButtons = document.querySelectorAll(".js-like-button");
+// let likeCounters = document.querySelectorAll(".js-likes-counter");
+// 
+    // likeButtons.forEach((bottone, i) => {
+        // 
+            //     bottone.addEventListener("click", () => {
+                //         bottone.preventDefault;
+                //         let contatore = likeCounters[i];
+                // 
+                    //         if (!contatore.classList.contains('like-button--liked')) {
+                        //             contatore.classList.add('like-button--like');
+                        // 
+                            //             let contatorePiu = parseInt(contatore.innerText);
+                        //             contatore.innerText = contatorePiu + 1;
+                        //         } else {
+                            // 
+                                //             contatore.classList.remove('like-button--like');
+                            // 
+                                //             let contatorePiu = parseInt(contatore.innerText);
+                            //             contatore.innerText = contatorePiu - 1;
+                            //    }
+                //   });
+        // });
+// 
+    // 
+
+
+
+
+
+
+
+
+
+
+    // let parola1 = prompt('inserisci una parola1');
 // let parola2 = prompt('inserisci una parola2');
 // 
     // swagChekDelleParoleInseriteDallUtenteInPrompt(parola1,parola2);
